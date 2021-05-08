@@ -1,0 +1,19 @@
+{
+  "name": "project-calliope",
+  "version": "1.0.0",
+  "description": "Backend repository for Kaagaz, D361",
+  "main": "server.js",
+  "scripts": {
+    "test": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/opencodenitr/project-calliope.git"
+  },
+  "author": "OpenCode NITR",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/opencodenitr/project-calliope/issues"
+  },
+  "homepage": "https://github.com/opencodenitr/project-calliope#readme"
+}
