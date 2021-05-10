@@ -6,7 +6,7 @@ const mongoose = require("mongoose")
 const cors = require("cors")
 require("dotenv").config()
 
-const userRoutes = require("./routes/user")
+const userRoutes = require("./routes/users")
 
 console.log(process.env.DATABASE_URL)
 
@@ -25,7 +25,8 @@ app.use(cookieParser())
 
 app.use("/api/users", userRoutes)
 
-app.get("/")
+//use this to show the image you have in node js server to client (react js)
+app.use("/uploads", express.static("uploads"))
 
 const port = process.env.PORT || 6666
 
