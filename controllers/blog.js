@@ -45,12 +45,12 @@ exports.getBlogs = (req, res) => {
 		})
 }
 
-// exports.getPost = (req, res) => {
-// 	console.log(req.body)
-// 	Blog.findOne({ _id: req.body.postId })
-// 		.populate("writer")
-// 		.exec((err, post) => {
-// 			if (err) return res.status(400).send(err)
-// 			res.status(200).json({ success: true, post })
-// 		})
-// }
+exports.getPost = (req, res) => {
+	console.log(req.body)
+	Blog.findOne({ _id: req.body.postId })
+		.populate("writer")
+		.exec((err, post) => {
+			if (err) return res.status(400).send(err)
+			res.status(200).json({ success: true, post })
+		})
+}
