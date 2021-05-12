@@ -8,7 +8,7 @@ require("dotenv").config()
 
 const userRoutes = require("./routes/users")
 
-console.log(process.env.DATABASE_URL)
+// console.log(process.env.DATABASE_URL)
 
 mongoose.connect(process.env.DATABASE_URL, {
 	useNewUrlParser: true,
@@ -27,6 +27,7 @@ app.use("/api/users", userRoutes)
 
 //use this to show the image you have in node js server to client (react js)
 app.use("/uploads", express.static("uploads"))
+app.use("/api/blog", require("./routes/blog"))
 
 const port = process.env.PORT || 6666
 
