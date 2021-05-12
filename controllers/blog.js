@@ -36,14 +36,14 @@ exports.createPost = (req, res) => {
 	// });
 }
 
-// exports.getBlogs = (req, res) => {
-// 	Blog.find()
-// 		.populate("writer")
-// 		.exec((err, blogs) => {
-// 			if (err) return res.status(400).send(err)
-// 			res.status(200).json({ success: true, blogs })
-// 		})
-// }
+exports.getBlogs = (req, res) => {
+	Blog.find()
+		.populate("writer")
+		.exec((err, blogs) => {
+			if (err) return res.status(400).send(err)
+			res.status(200).json({ success: true, blogs })
+		})
+}
 
 // exports.getPost = (req, res) => {
 // 	console.log(req.body)
