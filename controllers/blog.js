@@ -13,28 +13,28 @@ exports.uploadFiles = (req, res) => {
 	})
 }
 
-// exports.createPost = (req, res) => {
-// 	let blog = new Blog({
-// 		content: req.body.content,
-// 		writer: req.body.userID,
-// 	})
+exports.createPost = (req, res) => {
+	let blog = new Blog({
+		content: req.body.content,
+		writer: req.body.userID,
+	})
 
-// 	blog.save((err, postInfo) => {
-// 		if (err) return res.json({ success: false, err })
-// 		return res.status(200).json({ success: true, postInfo })
-// 	})
+	blog.save((err, postInfo) => {
+		if (err) return res.json({ success: false, err })
+		return res.status(200).json({ success: true, postInfo })
+	})
 
-// 	// blog.save((err, response) => {
-// 	//     if (err) return res.json({ success: false, err });
-// 	//     Blog.find({ _id: response._id })
-// 	//         .populate('writer')
-// 	//         .exec((err, result) => {
-// 	//             let postInfo = result[0]
-// 	//             if (err) return res.json({ success: false, err });
-// 	//             return res.status(200).json({ success: true,  postInfo });
-// 	//         })
-// 	// });
-// }
+	// blog.save((err, response) => {
+	//     if (err) return res.json({ success: false, err });
+	//     Blog.find({ _id: response._id })
+	//         .populate('writer')
+	//         .exec((err, result) => {
+	//             let postInfo = result[0]
+	//             if (err) return res.json({ success: false, err });
+	//             return res.status(200).json({ success: true,  postInfo });
+	//         })
+	// });
+}
 
 // exports.getBlogs = (req, res) => {
 // 	Blog.find()
