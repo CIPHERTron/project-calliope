@@ -4,7 +4,7 @@ const router = express.Router()
 const {
 	uploadFiles,
 	// getBlogs,
-	// createPost,
+	createPost,
 	// getPost,
 } = require("../controllers/blog")
 const { auth } = require("../middlewares/auth")
@@ -51,7 +51,7 @@ const upload = multer({ storage: storage }).single("file")
 
 router.post("/uploadfiles", uploadFiles)
 
-// router.post("/createPost", createPost)
+router.post("/createPost", createPost)
 
 // router.get("/getBlogs", getBlogs)
 
