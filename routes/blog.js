@@ -5,7 +5,7 @@ const {
 	uploadFiles,
 	getBlogs,
 	createPost,
-	// getPost,
+	getPost,
 } = require("../controllers/blog")
 const { auth } = require("../middlewares/auth")
 const multer = require("multer")
@@ -55,6 +55,6 @@ router.post("/createPost", createPost)
 
 router.get("/getBlogs", getBlogs)
 
-// router.post("/getPost", getPost)
+router.post("/getPost", getPost)
 
 module.exports = router
