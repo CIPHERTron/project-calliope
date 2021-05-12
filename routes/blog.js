@@ -3,7 +3,7 @@ const router = express.Router()
 
 const {
 	uploadFiles,
-	// getBlogs,
+	getBlogs,
 	createPost,
 	// getPost,
 } = require("../controllers/blog")
@@ -53,7 +53,7 @@ router.post("/uploadfiles", uploadFiles)
 
 router.post("/createPost", createPost)
 
-// router.get("/getBlogs", getBlogs)
+router.get("/getBlogs", getBlogs)
 
 // router.post("/getPost", getPost)
 
